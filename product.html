@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Details - Jewelry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#e61980",
+            "background-light": "#f8f6f7",
+            "background-dark": "#211119",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          animation: {
+            'add-to-cart': 'add-to-cart 0.7s ease-in-out forwards',
+          },
+          keyframes: {
+            'add-to-cart': {
+              '0%': { transform: 'scale(1)', backgroundColor: '#e61980' },
+              '50%': { transform: 'scale(1.05)', backgroundColor: '#34d399' },
+              '100%': { transform: 'scale(1)', backgroundColor: '#34d399' },
+            }
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .zoom-container {
+      overflow: hidden;
+    }
+    .zoom-container img {
+      transition: transform 0.5s ease;
+    }
+    .zoom-container:hover img {
+      transform: scale(1.2);
+    }
+    .add-to-cart-btn.clicked {
+      animation: add-to-cart 0.7s ease-in-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1b0e14] dark:text-[#fcf8fa]">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-6xl flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f3e7ed] dark:border-b-[#2a1a23] px-4 sm:px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-[#1b0e14] dark:text-[#fcf8fa]">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined !text-4xl">diamond</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Jewelry</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Necklaces</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Rings</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Bracelets</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Earrings</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#974e73] flex border-none bg-[#f3e7ed] dark:bg-[#2a1a23] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#1b0e14] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#f3e7ed] dark:bg-[#2a1a23] focus:border-none h-full placeholder:text-[#974e73] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex min-w-[40px] md:min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined md:hidden">shopping_cart</span>
+<span class="hidden md:inline truncate">Cart</span>
+</button>
+<button class="flex min-w-[40px] md:min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f3e7ed] dark:bg-[#2a1a23] text-[#1b0e14] dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined md:hidden">login</span>
+<span class="hidden md:inline truncate">Login</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 px-4 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Image Gallery -->
+<div class="flex flex-col gap-4">
+<div class="relative w-full rounded-xl overflow-hidden shadow-lg group zoom-container">
+<img class="w-full h-auto object-cover aspect-square transition-transform duration-500 ease-in-out" data-alt="A beautiful diamond necklace on a neutral background" id="main-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhCKpBwI5qZCIwCwz13tTyO7K55TYXmem4yzah-mrPLCbbXtJsWDvKlkZeTWyT7WgJL2srNtftJbjzTYBhxJAXNMs89iLNuBXJuOa_D5bh0DocSwZrdNBsHkB_Tbnn65gvA_MDnI7RjH1aHf4RGiSkKolvcFuN0qU6UbDPkU_b0DpZEnzQkkba5iqV9m8ITnKYZa8HznQQw8c3JOKD2obFzeFJDnzoBybuENaCczQJzo4aan-wbW1tyAJbnFji7jGy0WI_Dmig9wE"/>
+<button class="absolute top-4 right-4 bg-black/50 text-white rounded-full p-2 hover:bg-black/75 transition-colors">
+<span class="material-symbols-outlined">360</span>
+</button>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<img class="w-full h-auto object-cover aspect-square rounded-lg cursor-pointer border-2 border-primary" data-alt="Thumbnail of the necklace" onclick="document.getElementById('main-image').src=this.src" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcwFtn_OsJTDVVpwvDCZaaaNlGAVvFB5Ckp3SISSGg3cjt9POzg6RxlGvGqGH-oWe_SmlezFbxVNK5YwRxIn1kRQFcgTb5X-1wGHdx8vUj8e7Ygg99NGg3MIZyIqpneVhduoqSr7O7x9l4SuPiAZ2bKp9RM4H1IKNsKEgpKmlaFUZ30D-SxivAE-TXqnL_m_GnA2SjFedNlfVUCUDUC8xvngbB8uOGzIEPhEhU1kMWr4BIsEVPKdGX6wXTsh7SDGNn1sDla1BctcE"/>
+<img class="w-full h-auto object-cover aspect-square rounded-lg cursor-pointer border-2 border-transparent hover:border-primary" data-alt="Thumbnail of the necklace from another angle" onclick="document.getElementById('main-image').src=this.src" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZi6jo4eThnLwG7JgcVMH_W5mQTmZb38banjAFK9O9M--I2hgv-TRRuObQUScIjt7TxWFPW526mQ8kc466JKfjZi8muxtr1ROi2ghEkKCApBzP7jr7cIY8nItSCTJYfpETAWEj71iD1t3F0sTgGY4eFfSo738TCUpO4UY2Web96pnEERI2CY3AWIVbnJn8CbIDko1FPgB8h78cd1EJ-MkUq8qdYE8j4clHRHT3c0P9GY0YQdomPGqrHCjw9GvwTDZof5B4jt7F84U"/>
+<img class="w-full h-auto object-cover aspect-square rounded-lg cursor-pointer border-2 border-transparent hover:border-primary" data-alt="Thumbnail of the necklace on a model" onclick="document.getElementById('main-image').src=this.src" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6f0GRRCagFszjhfS_orrHd0hAIOifuCLKn7TXfat7mjqovxqjElgV8VKXGKtNxEEnDEWRuo1_Vflp4YZ1rKwapcMJCfwH40MHyoyKaUcnW9iK-X_Rk-2Je8RLV_M15uLLnd4c2ll9S3nev-UnkwiyJ6aOzyCFAhV4ebNP4Irn-LB6zF0bUUuvEfw0lshqekLiBkxo4PhqTSWBWg9SCypVOKSt-PXPwF_Nv3Cf02FDcSmgVRnjBvJi8wGxD4AD3Er6HVrSBKNVmiU"/>
+<img class="w-full h-auto object-cover aspect-square rounded-lg cursor-pointer border-2 border-transparent hover:border-primary" data-alt="Thumbnail of a lifestyle shot with the necklace" onclick="document.getElementById('main-image').src=this.src" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM-7oSACyolce3j6tB917gVFILeNVyYBjWsFx126nEJUL5LAWO6zoGm7p6-ZTu0IOIV_kIOm-f7kHCrJyOQuBD4KrjyVq-Td6goriMLuzm80yETZq_Bdhnomdbtx5CZ9lkZ2nXkUaI0NqLvrV-PpWW--f3feA4mCKQy5-5Y4YZfy5zxq0qBSwSNl5gDFswfgySIWYt9qHRloq29z_YEDz6mfqh8p_Ap-wlHa65-ByE9emcjLTCrla5bdmh68f7Mp_ODw_d0bbbpMk"/>
+</div>
+</div>
+<!-- Product Information -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<p class="text-3xl lg:text-4xl font-black leading-tight tracking-[-0.033em] text-[#1b0e14] dark:text-white">The 'Ethereal' Diamond Necklace</p>
+<p class="text-2xl font-normal leading-normal text-primary">$1,200</p>
+</div>
+<p class="text-base font-normal leading-normal text-[#4a273a] dark:text-[#f3e7ed]">
+                  A timeless piece that captures the essence of elegance. This necklace features a brilliant-cut diamond, set in a delicate white gold chain. It's the perfect accessory for any occasion, adding a touch of sparkle and sophistication to your look.
+                </p>
+<div class="flex flex-col border-t border-t-[#e7d0db] dark:border-t-[#2a1a23]">
+<details class="flex flex-col py-2 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-4">
+<p class="text-lg font-medium leading-normal">Specifications</p>
+<span class="material-symbols-outlined text-[#1b0e14] dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<ul class="text-[#4a273a] dark:text-[#f3e7ed] text-sm font-normal leading-normal pb-2 list-disc pl-5 space-y-1">
+<li>Material: 18k White Gold</li>
+<li>Diamond Carat: 0.5 ct, G color, VS2 clarity</li>
+<li>Chain Length: 18 inches (adjustable to 16 inches)</li>
+<li>Clasp Type: Spring Ring</li>
+<li>Care: Professional cleaning recommended</li>
+</ul>
+</details>
+<details class="flex flex-col border-t border-t-[#e7d0db] dark:border-t-[#2a1a23] py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-4">
+<p class="text-lg font-medium leading-normal">Shipping &amp; Returns</p>
+<span class="material-symbols-outlined text-[#1b0e14] dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="text-[#4a273a] dark:text-[#f3e7ed] text-sm font-normal leading-normal pb-2">Free insured shipping worldwide. 30-day no-hassle returns.</p>
+</details>
+</div>
+<button class="add-to-cart-btn flex w-full items-center justify-center rounded-lg h-14 px-8 bg-primary text-white text-lg font-bold leading-normal tracking-[0.015em] transition-all duration-300 hover:bg-opacity-90 active:scale-95" onclick="this.classList.add('clicked'); setTimeout(() =&gt; this.classList.remove('clicked'), 700);">
+<span class="truncate">Add to Cart</span>
+</button>
+</div>
+</div>
+<!-- Customer Reviews -->
+<div class="mt-16">
+<h3 class="text-2xl font-bold mb-6 text-[#1b0e14] dark:text-white">Customer Reviews</h3>
+<div class="flex items-center gap-4 mb-8">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<p class="text-sm font-medium">4.8 out of 5 stars (based on 23 reviews)</p>
+</div>
+<div class="space-y-8">
+<div class="flex flex-col gap-2 p-6 rounded-xl bg-[#fcf8fa] dark:bg-[#2a1a23] shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<p class="font-bold">Sophia L.</p>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+</div>
+</div>
+<p class="text-xs text-[#974e73] dark:text-[#f3e7ed]">2 weeks ago</p>
+</div>
+<p class="text-sm text-[#4a273a] dark:text-[#f3e7ed]">"Absolutely breathtaking! The diamond has so much fire and sparkle. I get compliments every time I wear it. The quality is exceptional."</p>
+</div>
+<div class="flex flex-col gap-2 p-6 rounded-xl bg-[#fcf8fa] dark:bg-[#2a1a23] shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<p class="font-bold">Ethan K.</p>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star_half</span>
+</div>
+</div>
+<p class="text-xs text-[#974e73] dark:text-[#f3e7ed]">1 month ago</p>
+</div>
+<p class="text-sm text-[#4a273a] dark:text-[#f3e7ed]">"Bought this as a gift for my wife and she was over the moon. It's elegant, delicate, and looks even better in person. The packaging was also very luxurious."</p>
+</div>
+</div>
+</div>
+<!-- You Might Also Like -->
+<div class="mt-16">
+<h3 class="text-2xl font-bold mb-6 text-[#1b0e14] dark:text-white">You Might Also Like</h3>
+<div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
+<div class="flex flex-col gap-2 group">
+<div class="overflow-hidden rounded-lg">
+<img class="w-full h-auto object-cover aspect-square group-hover:scale-105 transition-transform duration-300" data-alt="Diamond stud earrings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACPraWmziEQkdhwlyXRRYu0JNnyr9bDr2GUDd-IDi83WJ4nnckXMMhGgODSNvSIPNP34TX5jHcD5HVEE_EQR1U16kXzhA3hTc4r05ul4FwJPTUB868Utrpo4Y0eotZZVJhkbnsTT6KcWUe2R7d1IvY_loqJWP1UoO9lIYwJ9QaTXkZvVvfCtDvjHuh5WhIm0OTKp9r4LTCgYRGlXjSWAek2rmUUkvdweTFrLVJTQL2LKzJYcoEVvZTnBrhkIcH7wYWdCsD7B1H5-k"/>
+</div>
+<h4 class="font-bold text-sm">Ethereal Stud Earrings</h4>
+<p class="text-sm text-primary">$850</p>
+</div>
+<div class="flex flex-col gap-2 group">
+<div class="overflow-hidden rounded-lg">
+<img class="w-full h-auto object-cover aspect-square group-hover:scale-105 transition-transform duration-300" data-alt="Solitaire diamond ring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB75wT1tloauV6M9GbCLqRN90mkFsrvXVUbiiRlP1bp8xlUnBKW0GXmwl7xxEa8nqNNhBg0mI-K8jRHITRGd085ZTXsiOZ6HtmzyZDkR0ApRHWuuskXPd4PduUr4kztZJYRQaPr-vET7ibUBA2AqnNsWmIdnnIfUA0n5YCQ9-_a37Gtvw6LJ0kfoGzi3fgHp6Hk_XFeknlKARRvFXJx0am0knFlm_AyW81Ny-MN2dkwXbhbT9df1Waz-Z5zJ1lcURmOAqX3kghKMac"/>
+</div>
+<h4 class="font-bold text-sm">Solitaire Engagement Ring</h4>
+<p class="text-sm text-primary">$2,500</p>
+</div>
+<div class="flex flex-col gap-2 group">
+<div class="overflow-hidden rounded-lg">
+<img class="w-full h-auto object-cover aspect-square group-hover:scale-105 transition-transform duration-300" data-alt="Diamond tennis bracelet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPkWKiyRBAXe5fi9_EUqRtTppCva34c9LI5ujl_yJMPT2l-ObITRl_KwL1NGTns1Wol5PeQMibQSIW65acVj4hb4hG42BoESfBnWLBZeyjBAVngfw2MWGhhnGh-h_QNszU78XaTpOhMpp5SkRUknQRfu7L8Xtyu9Eh9KlZIUTWc_V4QdHMfpCIilJ1PWKtLywPTCYqh6y0n0np11EJSYP67TRKip9Df0FzZaN9vRDBR_Hw-LyElh6d7SnstC8oAlvqmpeRaGgwuCY"/>
+</div>
+<h4 class="font-bold text-sm">Classic Tennis Bracelet</h4>
+<p class="text-sm text-primary">$4,200</p>
+</div>
+<div class="flex flex-col gap-2 group">
+<div class="overflow-hidden rounded-lg">
+<img class="w-full h-auto object-cover aspect-square group-hover:scale-105 transition-transform duration-300" data-alt="Pearl drop earrings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpHF9LxPyJHEr0RnMwCi9RRQF9F29ORNXHmykKNh29FV8-Pzyg9J4f37XKugq4z-3vQRHNcY2CCQ7DRE9Mqg3QzNePo2M73tFits6MciE-lMhm3mhTQcoVxZMcc4lFywn4ye10Sl0v_k-jXC-tr1ZCZCB5dGIEOLbpF6i8pRj0mWZUsq7mH36AKp41d2YBgPZk52_CumjHaR1dkS-o60I3OLW5AB0Xf7glpwjnEVsx4y6RTHtYXmTIQ3fw36gwpky7voCkwftG2JY"/>
+</div>
+<h4 class="font-bold text-sm">Lustrous Pearl Earrings</h4>
+<p class="text-sm text-primary">$600</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>
