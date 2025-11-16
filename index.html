@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aurum - Timeless Elegance, Modern Design</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            // Updated to Monochromatic Editorial scheme
+            "primary": "#b8860b", // Gold accent
+            "background-light": "#0a0a0a", // Near black for light mode background
+            "background-dark": "#0a0a0a", // Near black for dark mode background
+            "text-light": "#ffffff", // White text on dark background
+            "text-dark": "#ffffff" // White text on dark background
+          },
+          fontFamily: {
+            "display": ["Spline Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style type="text/tailwindcss">
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }.flip-on-scroll {
+        opacity: 0;
+        transform: rotateX(90deg);
+        transform-origin: top center;
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .flip-on-scroll.animate-flip {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 sm:px-10 py-3 border-b border-solid border-primary/20">
+<div class="flex items-center gap-4 text-text-light dark:text-text-dark">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-[-0.015em] text-text-light dark:text-text-dark">Aurum</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Jewellery</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Wedding</a>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<section class="relative h-[70vh] w-full flex items-center justify-center">
+<video autoplay="" class="absolute top-0 left-0 w-full h-full object-cover z-0" loop="" muted="" playsinline="">
+<source src="https://vasundharadiamondroof.com/videos/vasu-home.mp4" type="video/mp4"/>
+            Your browser does not support the video tag.
+          </video>
+<div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10"></div>
+<div class="relative z-20 flex flex-col items-center text-center px-4">
+<h1 class="text-white tracking-light text-4xl md:text-5xl font-bold leading-tight">Timeless Elegance, Modern Design</h1>
+<p class="text-white/80 mt-4 max-w-xl">Experience the pinnacle of craftsmanship and style with our exquisite jewelry collections.</p>
+</div>
+</section>
+<section class="py-24 px-4 sm:px-10 bg-black text-white">
+<div class="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-5 gap-0 items-stretch">
+<div class="md:col-span-3 h-[500px] md:h-[700px] relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center md:bg-left bg-no-repeat transition-transform duration-1000 ease-in-out hover:scale-105" data-alt="Close-up of a signature gold necklace with intricate details" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnRaBb1nUiTB_t2L5jWt3qKdZaS0dLopJ1X6isCPGOnqTxzFkNE-dWtxB_9uio7MKTs9Wf2Zgng8hT_D6eYdbH_HdMPhr09XGDoa-zXZqCT7On8A_zqbZMA7VikxH6dgQ01myT4DCYRpO-ePTLG03gZVOtZBV20tvg3oCUdqXCwXzM304orOZPHZsq8E1j3aOncayTdYhtBTJi6Of7iNxW60QlrmeOJL0Lie6XpN2nrfvs4V6XD83cSKfgj3qraon5ffjcDRoiJsM');"></div>
+</div>
+<div class="md:col-span-2 flex flex-col justify-center p-8 md:p-12 border-t md:border-l border-b border-primary relative z-10 bg-black">
+<div class="flex flex-col gap-8 flip-on-scroll">
+<p class="text-lg font-bold text-primary tracking-widest uppercase">Our Story</p>
+<h2 class="text-6xl md:text-7xl font-bold text-white leading-tight mt-4 -rotate-3 mb-6">Our Legacy of Light</h2>
+<p class="text-xl md:text-2xl text-white/90 leading-relaxed max-w-xl">
+            For generations, Aurum has been synonymous with unparalleled quality and breathtaking design. We source the finest materials and employ master artisans to craft pieces that are not just accessories, but heirlooms.
+          </p>
+<p class="text-base text-white/70 italic max-w-xl mt-4">
+            Each creation tells a story of passion, precision, and the timeless pursuit of beauty. Discover the piece that tells yours.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-4 sm:px-10 bg-black dark:bg-black">
+<div class="mx-auto max-w-5xl">
+<h2 class="text-white dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-8 text-center">Our Collections</h2>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden -mx-4">
+<div class="flex items-stretch p-4 gap-8">
+<div class="flex h-full flex-1 flex-col gap-4 text-center rounded-lg min-w-52 pt-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-40 h-40 border-2 border-primary/30" data-alt="A collection of elegant gold rings" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAG-jAtkB0AeEARu83KAbZak56JkhZSKjWVWx4_5s48MmLQbZicFLAiQzJKWFnyqdWO4r9lo9LZ6-VNOeh8fsDv7eOGL3ITz8oQp_vj3xuj13KlkKEmJ3bCnRSixiqmBPAwP8Ya9JCp4W08490PKrZLEMBeKKzQnM232QiBGfGPuWMbxoEtKsqYLS2ISXMeENHYwI7PyuML2rFNzgFOAsS69k3cdomujmoq72e7xppazl6layfM3XY5kiIXUqzQUs4k-N8xjlOHrqI");'></div>
+<div>
+<p class="text-white dark:text-white text-base font-medium leading-normal">Rings</p>
+<p class="text-white/70 dark:text-white/70 text-sm font-normal leading-normal">Discover our collection</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 text-center rounded-lg min-w-52 pt-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-40 h-40 border-2 border-primary/30" data-alt="A delicate gold necklace on a white background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCpaf2qyyB_u2a4QPHscr0JkFElEZGe-X5Vh86NY1lmi4p5UUMZ1DjFCrXKM7o3IEORwKj0v5N4LMld2IEWqBLdetPn0E2V8R2a2G_K7fIVOKdahHdzzgWkKG_G1Hysmc9cd2u9vcziJ-XXPnL9qD9vAz9E1pBb38JtTdYUMEcNiEDN35p6-gnaE19PTA7BH3UDR1Ox2cAXFrYE2FFTjCBeHFtu7VS4nxXKVre9KdUEMopVbYtW3djgVb72ZQNdHeMoZBvYfZL2ZVI");'></div>
+<div>
+<p class="text-white dark:text-white text-base font-medium leading-normal">Necklaces</p>
+<p class="text-white/70 dark:text-white/70 text-sm font-normal leading-normal">Discover our collection</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 text-center rounded-lg min-w-52 pt-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-40 h-40 border-2 border-primary/30" data-alt="A stylish gold bracelet with charms" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCyc2RgQ2xt7GGSWZeR39U-rTYB0Wsjv_8kwYzxkeOTneqwplbn1I1R1Gc_xC8KYL1X9ykculLoTnaY_RR_T5kQUMSnD1ZtCNQnjGHSIK0UYERI3peZ6-vwyO6zagCJt-FFzGY2J6B9AHoSyVDghmJlbQTWrPbjK4qIzgd5RvUmxpa4ZLLAQxDJbWTe2iN0nZMgV2MiUU-JG3FLPMGc1VO4IjjHAd0KaYW7oH9uco85wJ4i2mBYkh3Ds58-kvLsNcakfur8GJ_RnU");'></div>
+<div>
+<p class="text-white dark:text-white text-base font-medium leading-normal">Bracelets</p>
+<p class="text-white/70 dark:text-white/70 text-sm font-normal leading-normal">Discover our collection</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 text-center rounded-lg min-w-52 pt-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-40 h-40 border-2 border-primary/30" data-alt="A pair of sparkling gold earrings" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDSMFT_zLd7NbDQEIsV2QklQQJ-JdxFH5-prWM35VMnWW0hD1qZKX7LTVqYehg1epvtKUANZBnCgcYfxoVol89dN5VnDK0Qzn4rMZAhS5ssj3TQK6QvuJ2GBy0Lci9DV0Z4_vAq-svKNZPPZ_B-FpUIAQbbfUJmeZXRcTGkOcD01U6sYyyD4NeU00OkDdJgcyrs8pw2Ym8-3BavRAra8rtfta3KY99X-jRDf0xPXA3gnF4h7u3R6xGu2fUrJe7-zgs5j1QkcAM0_A");'></div>
+<div>
+<p class="text-white dark:text-white text-base font-medium leading-normal">Earrings</p>
+<p class="text-white/70 dark:text-white/70 text-sm font-normal leading-normal">Discover our collection</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-4 sm:px-10 bg-black text-white">
+<div class="mx-auto max-w-5xl">
+<h2 class="text-white dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-8 text-center">Trending Now</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group relative overflow-hidden rounded-lg">
+<div class="w-full h-80 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="The Solitaire engagement ring in gold" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtWfE1YQqJh1RwFRSd4h2u-F-fdWBW5TLezbUIZbbo3663Sx9A7saK2TGIZLJpSvbTHvjx5RlXgpCAk319SavbuTLtS8HxHWtEwlvyRtesvn6FrgdUProAfFD1J29-ANTIUoz2nqmzNkEmKl64hN2_ynppmkEv70y2Zf3ZCXjRvzHQEQaCb8JlySlQWDm0ctc4Xo5uItsJX0jTswYEQu8pEfA0OKhXj13pN4dop-qSJriT8zbRX6NIR3YPi5w_D4g46HOFkRkPv0Q');"></div>
+<div class="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-4">
+<h3 class="font-semibold text-white">The Solitaire</h3>
+<a class="text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity" href="#">View Details</a>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg">
+<div class="w-full h-80 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="The Aura pendant necklace in gold" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqe5x5L_LH2HgGWVTKq2oaJAETpeR7ucZJMYB_OBcr4n2d4j46zSufgBWwmDAzK-r4TmN_Qr8V4cWsQbSnPmgnCF-xyHSULOoN50n0wud8t5gZwTF6s6ua8lpjWboiBvGZzwuGBTzp-C2oee-HwclkYCaDQRCC8O8XJN0SiQ8Bnm7Wv2OAQMFC8-j4h44Eg2hM0DwF3dLbNH1PU3vvecvnwBrWBkwUHsLuCiG247Fg_usQh3Wp2G3QP6stgWc2ATlT1Zdh_TrkiY0');"></div>
+<div class="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-4">
+<h3 class="font-semibold text-white">Aura Pendant</h3>
+<a class="text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity" href="#">View Details</a>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg">
+<div class="w-full h-80 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="The Eternal gold band" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMvamjPxX5773L2n0YzFGp76Wo7Xtv9xdpcEZuC9PID51STwTaf2YLspq_l5AMmg8k26z2wiyJRUVXynSpR5eJ33y8tt-idL3S8saMyO1RZ0MeHoQbFOoP32qjlQQ3CW46_vVg0TsWmltQ7YdXYLlUT5Xo3qbPwneFWXvDzyMUveZWPLjOfYD5qNvPzXVX1zUDSWKAPrRAOMJ3JIuEkAYAqw6KqQ30qWJPSg9akxNekoGGaZ_U_pIg9tApjBFeVU9Rfe-fCmVtNaY');"></div>
+<div class="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-4">
+<h3 class="font-semibold text-white">Eternal Band</h3>
+<a class="text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity" href="#">View Details</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative py-24 px-4 sm:px-10 bg-cover bg-center bg-fixed" data-alt="A blurred, elegant lifestyle shot of a woman wearing jewelry" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAN2pOVUaCK0Vej_HRjcmgiVSluF2mYFv8DEQOlrYjGBM35Gxwqxupd1U2q-Fu5-ilkSJKjBrVUDjlqP77OksAMGsmS5i-uLhYQolpe-fXURj88hxCiK1kQvmsLbph-iQnXsDcRrjU5AZLKjPoIpEHYxbNlHcrdqopcY5euR-FXzw94yDssE7Om2ClyIpnW0R_F-TsgNgju-znImgkLIbaC5tZMoInPCd659_fv0F1s2-9cSatEh3JEpEABPRKfHjMD2MJ4HqY485Q');">
+<div class="absolute inset-0 bg-black/80"></div>
+<div class="relative mx-auto max-w-2xl text-center text-white">
+<h2 class="text-3xl font-bold text-primary">Words of Radiance</h2>
+<div class="mt-8">
+<p class="text-xl italic">"The attention to detail is simply exquisite. My Aurum piece is more than jewelry; it's a piece of art that I will cherish forever."</p>
+<p class="mt-4 font-semibold text-white/90">- Alexandra T.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-black text-white py-16 px-4 sm:px-10">
+<div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-1">
+<h3 class="text-lg font-bold text-primary">Aurum</h3>
+<p class="mt-2 text-sm text-white/70">Crafting timeless elegance since 1923.</p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-semibold text-white">Explore</h4>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-white/70 hover:text-primary" href="#">About Us</a></li>
+<li><a class="text-white/70 hover:text-primary" href="#">Contact</a></li>
+<li><a class="text-white/70 hover:text-primary" href="#">FAQ</a></li>
+<li><a class="text-white/70 hover:text-primary" href="#">Shipping &amp; Returns</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-semibold text-white">Connect</h4>
+<div class="flex mt-4 space-x-4">
+<a class="text-white/70 hover:text-primary" data-alt="Instagram logo" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 012.792 2.792c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-2.792 2.792c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-2.792-2.792c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 012.792-2.792c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 0C9.58 0 9.22.01 8.21.058c-1.063.05-1.92.22-2.72.522a6.9 6.9 0 00-3.84 3.84c-.302.8-.472 1.657-.522 2.72C.01 9.22 0 9.58 0 12s.01 2.78.058 3.79c.05 1.063.22 1.92.522 2.72a6.9 6.9 0 003.84 3.84c.8.302 1.657.472 2.72.522C9.22 23.99 9.58 24 12 24s2.78-.01 3.79-.058c1.063-.05 1.92-.22 2.72-.522a6.9 6.9 0 003.84-3.84c.8-.302 1.657-.472 2.72-.522C23.99 14.78 24 14.42 24 12s-.01-2.78-.058-3.79c-.05-1.063-.22-1.92-.522-2.72a6.9 6.9 0 00-3.84-3.84c-.8-.302-1.657-.472-2.72-.522C14.78.01 14.42 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-white/70 hover:text-primary" data-alt="Facebook logo" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-semibold text-white">Newsletter</h4>
+<p class="mt-4 text-sm text-white/70">Subscribe for exclusive offers and stories.</p>
+<form class="mt-4 flex">
+<input class="w-full bg-white/10 border-white/30 rounded-l-md text-sm text-white placeholder-white/50 focus:ring-primary focus:border-primary" placeholder="Your email" type="email"/>
+<button class="bg-primary text-background-dark font-bold px-4 rounded-r-md text-sm hover:opacity-90" type="submit">Sign Up</button>
+</form>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white/20 text-center text-sm text-white/50">
+<p>© 2024 Aurum. All Rights Reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+<script>
+    // Intersection Observer for scroll-triggered animation
+    const elementsToAnimate = document.querySelectorAll('.flip-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-flip');
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the element is in view
+    });
+    elementsToAnimate.forEach(element => {
+        observer.observe(element);
+    });
+</script>
+
+</body></html>
